@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            .container {
+                border: 1px solid black;
+                margin: auto;
+                margin-top: 20px;
+                display: flex;
+                width: 306px;
+                flex-wrap: wrap;
+                
+                
+            }
+            .box {
+                border: 1px solid black;
+                width: 100px;
+                height: 100px;
+                font-size: 70px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                color: blue;
+                background-color: blanchedalmond;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box" id="1" onclick="taketurn(1)"></div>
+            <div class="box" id="2" onclick="taketurn(2)"></div>
+            <div class="box" id="3" onclick="taketurn(3)"></div>
+            <div class="box" id="4" onclick="taketurn(4)"></div>
+            <div class="box" id="5" onclick="taketurn(5)"></div>
+            <div class="box" id="6" onclick="taketurn(6)"></div>
+            <div class="box" id="7" onclick="taketurn(7)"></div>
+            <div class="box" id="8" onclick="taketurn(8)"></div>
+            <div class="box" id="9" onclick="taketurn(9)"></div>
+        </div>
+    </body>
+    <script>
+        var numberofclicks = 0;
+        function taketurn(id) {
+          var clickebox = document.getElementById(id);
+          numberofclicks++;
+          clickebox.innerText=numberofclicks % 2 !== 0 ? "x": "0";
+          clickebox.style.pointerEvents="none";
+
+            
+        }
+    </script>
+</html>
